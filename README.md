@@ -32,6 +32,7 @@ project-root/
 ├── public/employees.json       # Mock employee dataset
 ├── App.tsx                     # Main application file
 └── README.md                   # Project documentation
+└── NOTES.md                    # Project Notes
 ```
 
 ## Setup Instructions
@@ -57,7 +58,7 @@ npx json-server ./public/employee.json
 npm run dev
 ```
 
-4. **Open in browser:**
+5. **Open in browser:**
    Navigate to `http://localhost:5173` (or your dev server URL).
 
 ## Data

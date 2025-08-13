@@ -1,0 +1,136 @@
+**AI Tools Used:**
+
+- Microsoft Copilot to Help with CSS and recursive Logic.
+
+**Sample Employees.json:**
+
+```json
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Rishi Mathur",
+      "title": "CEO",
+      "department": "Executive",
+      "photo": "https://i.pravatar.cc/150?img=12",
+      "managerId": null
+    },
+    {
+      "id": 2,
+      "name": "Raunak Verma",
+      "title": "VP Engineering",
+      "department": "Engineering",
+      "photo": "https://i.pravatar.cc/150?img=48",
+      "managerId": 1
+    },
+    {
+      "id": 3,
+      "name": "Neha Gupta",
+      "title": "VP Product",
+      "department": "Product",
+      "photo": "https://i.pravatar.cc/150?img=32",
+      "managerId": 1
+    },
+    {
+      "id": 4,
+      "name": "Ankit Verma",
+      "title": "Engineering Manager",
+      "department": "Engineering",
+      "photo": "https://i.pravatar.cc/150?img=23",
+      "managerId": 2
+    },
+    {
+      "id": 5,
+      "name": "Priya Singh",
+      "title": "Senior Software Engineer",
+      "department": "Engineering",
+      "photo": "https://i.pravatar.cc/150?img=5",
+      "managerId": 4
+    },
+    {
+      "id": 6,
+      "name": "Vikram Vijay",
+      "title": "Software Engineer",
+      "department": "Engineering",
+      "photo": "https://i.pravatar.cc/150?img=7",
+      "managerId": 4
+    },
+    {
+      "id": 7,
+      "name": "Meera Nair",
+      "title": "Product Manager",
+      "department": "Product",
+      "photo": "https://i.pravatar.cc/150?img=14",
+      "managerId": 3
+    },
+    {
+      "id": 8,
+      "name": "Karan Singh",
+      "title": "Designer",
+      "department": "Design",
+      "photo": "https://i.pravatar.cc/150?img=28",
+      "managerId": 3
+    },
+    {
+      "id": 9,
+      "name": "Sara Khan",
+      "title": "People Ops Manager",
+      "department": "People",
+      "photo": "https://i.pravatar.cc/150?img=36",
+      "managerId": 1
+    },
+    {
+      "id": 10,
+      "name": "Rahul Mathur",
+      "title": "Recruiter",
+      "department": "People",
+      "photo": "https://i.pravatar.cc/150?img=19",
+      "managerId": 9
+    },
+    {
+      "id": 11,
+      "name": "Rohan Patel",
+      "title": "Data Engineer",
+      "department": "Engineering",
+      "photo": "https://i.pravatar.cc/150?img=49",
+      "managerId": 4
+    },
+    {
+      "id": 12,
+      "name": "Ishita Roy",
+      "title": "QA Engineer",
+      "department": "Engineering",
+      "photo": "https://i.pravatar.cc/150?img=2",
+      "managerId": 4
+    },
+    {
+      "id": 13,
+      "name": "Devika Pillai",
+      "title": "UX Researcher",
+      "department": "Design",
+      "photo": "https://i.pravatar.cc/150?img=52",
+      "managerId": 8
+    },
+    {
+      "id": 14,
+      "name": "Sanjay Kulkarni",
+      "title": "Product Designer",
+      "department": "Design",
+      "photo": "https://i.pravatar.cc/150?img=50",
+      "managerId": 8
+    },
+    {
+      "id": 15,
+      "name": "Naina Kapoor",
+      "title": "Group PM",
+      "department": "Product",
+      "photo": "https://i.pravatar.cc/150?img=40",
+      "managerId": 3
+    }
+  ]
+}
+```
+
+**Screenshots:**
+![Screenshot1](./public/Screenshot_1.png "Screenshot 1")
+![Screenshot2](./public/Screenshot_2.png "Screenshot 2")
