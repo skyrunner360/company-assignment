@@ -44,24 +44,26 @@ export default function App() {
               setDark={setDark}
             />
           </div>
-          <main className="ml-64 flex-1 p-6 bg-gray-50 dark:bg-gray-950 min-h-screen space-y-4">
-            <section className="space-y-4">
-              <SearchBar
-                query={query}
-                setQuery={setQuery}
-                dept={dept}
-                setDept={setDept}
-                departments={departments}
-              />
-              <ScrollArea className="h-[calc(100vh-210px)] rounded-2xl border p-4">
-                <EmployeeGrid employees={filtered} />
-              </ScrollArea>
-            </section>
-            <aside className="hidden min-h-0 flex-col gap-4 rounded-2xl border p-4 lg:flex">
-              <ScrollArea className="h-[calc(100vh-170px)] pr-2">
-                <OrgChart employees={filtered} />
-              </ScrollArea>
-            </aside>
+          <main className="ml-64 flex-1 p-6 bg-gray-50 dark:bg-gray-950 min-h-screen">
+            <div className="md:flex space-x-2">
+              <section className="space-y-4">
+                <SearchBar
+                  query={query}
+                  setQuery={setQuery}
+                  dept={dept}
+                  setDept={setDept}
+                  departments={departments}
+                />
+                <ScrollArea className="h-[calc(100vh-140px)] rounded-2xl border p-4">
+                  <EmployeeGrid employees={filtered} />
+                </ScrollArea>
+              </section>
+              <aside className="hidden min-h-0 flex-col gap-4 mt-12 rounded-2xl border p-4 lg:flex">
+                <ScrollArea className="h-[calc(100vh-170px)] pr-2">
+                  <OrgChart employees={filtered} />
+                </ScrollArea>
+              </aside>
+            </div>
           </main>
         </div>
       </div>
