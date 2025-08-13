@@ -25,13 +25,13 @@ This project is a responsive Employee Directory web application with an integrat
 
 ```
 project-root/
-├── src/components/         # Reusable UI components
+├── src/components/             # Reusable UI components
 ├── src/lib/hooks/              # Custom React hooks
 ├── src/lib/types/              # TypeScript type definitions
-├── public/             # Static assets
-├── public/employees.json      # Mock employee dataset
-├── App.tsx             # Main application file
-└── README.md           # Project documentation
+├── public/                     # Static assets
+├── public/employees.json       # Mock employee dataset
+├── App.tsx                     # Main application file
+└── README.md                   # Project documentation
 ```
 
 ## Setup Instructions
