@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+# Employee Directory + Org Chart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a responsive Employee Directory web application with an integrated Organizational Chart viewer. It allows users to browse employees by department, search by name or title, and view reporting hierarchies in a clean, modern interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Left Sidebar Navigation** with dark mode toggle and department filter
+- **Employee Search** by name, title, or department
+- **Responsive Layout** optimized for desktop, tablet, and mobile
+- **Organizational Chart** with hierarchical view of manager-report relationships
+- **Reusable UI Components** for scalability and maintainability
+- **Mock Data Integration** (using Json Server)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** with **TypeScript**
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **Lucide React** for icons
+- **shadcn/ui** components for UI primitives
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Folder Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+project-root/
+├── src/components/         # Reusable UI components
+├── src/lib/hooks/              # Custom React hooks
+├── src/lib/types/              # TypeScript type definitions
+├── public/             # Static assets
+├── public/employees.json      # Mock employee dataset
+├── App.tsx             # Main application file
+└── README.md           # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd <project-directory>
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run Json-Server:**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npx json-server ./public/employee.json
 ```
+
+4. **Start the development server:**
+
+```bash
+npm run dev
+```
+
+4. **Open in browser:**
+   Navigate to `http://localhost:5173` (or your dev server URL).
+
+## Data
+
+The app uses `employees.json` with mock data for demonstration utilising `json-server`.
+
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "title": "Engineering Manager",
+  "department": "Engineering",
+  "photo": "https://i.pravatar.cc/150?img=1",
+  "managerId": null
+}
+```
+
+## Scalability Notes
+
+- Components follow the **atomic design principle** for reusability.
+- State management is localized but can be moved to a global store (Zustand, Redux) if the app grows.
